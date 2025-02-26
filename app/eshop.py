@@ -65,8 +65,9 @@ class ShoppingCart:
         return product_ids
 
 from dataclasses import dataclass
-from services import ShippingService
 from datetime import datetime, timedelta, timezone
+
+from services import ShippingService
 
 
 @dataclass

@@ -1,10 +1,12 @@
 import random
 
 import boto3
-from .eshop import Product, ShoppingCart, Order, Shipment
 from services import ShippingService
-from datetime import datetime, timedelta, timezone
+from services.publisher import ShippingPublisher
+from services.repository import ShippingRepository
 from services.config import AWS_ENDPOINT_URL, AWS_REGION, SHIPPING_TABLE_NAME, SHIPPING_QUEUE
+from .eshop import Product, ShoppingCart, Order, Shipment
+from datetime import datetime, timedelta, timezone
 from time import sleep
 
 due_date = datetime.now(timezone.utc) + timedelta(seconds=10)
@@ -38,7 +40,7 @@ if SHIPPING_TABLE_NAME not in existing_tables:
     )
     dynamo_client.get_waiter("table_exists").wait(TableName=SHIPPING_TABLE_NAME)
 
-shipping_service = ShippingService()
+shipping_service = ShippingService(ShippingRepository(), ShippingPublisher())
 shipments = []
 
 for j in range(1, 12):
