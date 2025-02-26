@@ -1,8 +1,5 @@
 import uuid
 from typing import Dict
-from dataclasses import dataclass
-from datetime import datetime, timedelta, timezone
-from services import ShippingService
 
 
 class Product:
@@ -66,6 +63,11 @@ class ShoppingCart:
         self.products.clear()
 
         return product_ids
+
+from dataclasses import dataclass
+from services import ShippingService
+from datetime import datetime, timedelta, timezone
+
 
 @dataclass
 class Order:
