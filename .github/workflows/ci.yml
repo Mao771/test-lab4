@@ -32,6 +32,13 @@ jobs:
           python -m pip install --upgrade pip
           pip install -r requirements.txt
 
+      - name: Run pylint
+        run: | 
+          pylint --fail-under 8 app
+          exitcode="$?"
+          echo "exitcode=$exitcode" >> $GITHUB_OUTPUT
+          exit "$exitcode"
+
       - name: Run integration tests
         run: |
           pytest --maxfail=1 --disable-warnings -v

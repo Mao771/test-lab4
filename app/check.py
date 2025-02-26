@@ -1,6 +1,7 @@
-import boto3
-from eshop import Product, ShoppingCart, Order, Shipment
 import random
+
+import boto3
+from .eshop import Product, ShoppingCart, Order, Shipment
 from services import ShippingService
 from datetime import datetime, timedelta, timezone
 from services.config import AWS_ENDPOINT_URL, AWS_REGION, SHIPPING_TABLE_NAME, SHIPPING_QUEUE
