@@ -9,9 +9,9 @@ class ShippingService:
     SHIPPING_COMPLETED: str = 'completed'
     SHIPPING_FAILED: str = 'failed'
 
-    def __init__(self):
-        self.repository = ShippingRepository()
-        self.publisher = ShippingPublisher()
+    def __init__(self, shipping_repository, shipping_publisher):
+        self.repository = shipping_repository
+        self.publisher = shipping_publisher
 
     @staticmethod
     def list_available_shipping_type():
