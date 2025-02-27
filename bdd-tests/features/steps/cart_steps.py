@@ -1,5 +1,5 @@
-# import os, sys
-# sys.path.append(os.path.abspath(os.path.join(os.path.dirname(__file__), "../../../")))
+import os, sys
+sys.path.append(os.path.abspath(os.path.join(os.path.dirname(__file__), "../../../")))
 from behave import given, when, then
 from app.eshop import Product, ShoppingCart
 
