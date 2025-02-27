@@ -10,9 +10,8 @@ jobs:
   integration-tests:
     strategy:
       matrix:
-        os: [ubuntu-latest, windows-latest]
-        python: [ "3.9" ]
-    runs-on: ${{ matrix.os }}
+        python: [ "3.8", "3.9" ]
+    runs-on: "ubuntu-latest"
 
     steps:
       - name: Check out the repository
