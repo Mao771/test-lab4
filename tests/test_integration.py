@@ -70,7 +70,7 @@ def test_place_order_with_unavailable_shipping_type_fails(dynamo_resource):
 def test_when_place_order_then_shipping_in_queue(dynamo_resource):
     shipping_service = ShippingService(ShippingRepository(), ShippingPublisher())
     cart = ShoppingCart()
-
+    print("TESTING PLACE ORDER SHIPPING QUEUE")
     cart.add_product(Product(
         available_amount=10,
         name='Product',
