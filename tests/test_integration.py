@@ -40,7 +40,6 @@ def test_place_order_with_mocked_repo(mocker, order_id, shipping_id):
     )
 
     assert actual_shipping_id == shipping_id, "Actual shipping id must be equal to mock return value"
-    assert 1 == 2, "No way!"
 
     mock_repo.create_shipping.assert_called_with(ShippingService.list_available_shipping_type()[0], ["Product"], order_id, shipping_service.SHIPPING_CREATED, due_date)
     mock_publisher.send_new_shipping.assert_called_with(shipping_id)
@@ -104,3 +103,4 @@ def test_when_place_order_then_shipping_in_queue(dynamo_resource):
 
     body = messages[0]["Body"]
     assert shipping_id == body
+    print("Done")
