@@ -103,3 +103,4 @@ def test_when_place_order_then_shipping_in_queue(dynamo_resource):
 
     body = messages[0]["Body"]
     assert shipping_id == body
+    print("Done")
