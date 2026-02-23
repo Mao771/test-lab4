@@ -1,2 +1,2 @@
 "DESCRIPTION","DURATION IN MS","NAME","PARENT SUITE","START TIME","STATUS","STOP TIME","SUB SUITE","SUITE","TEST CLASS","TEST METHOD"
-"","0","test_place_order_with_mocked_repo[order_1-shipping_1]","tests","Mon Feb 23 12:20:39 UTC 2026","broken","Mon Feb 23 12:20:39 UTC 2026","","test_integration","",""
+"","0","test_place_order_with_mocked_repo[order_1-shipping_1]","tests","Mon Feb 23 12:20:41 UTC 2026","broken","Mon Feb 23 12:20:41 UTC 2026","","test_integration","",""
