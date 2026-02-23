@@ -26,7 +26,7 @@ def test_place_order_with_mocked_repo(mocker, order_id, shipping_id):
 
     cart = ShoppingCart()
     cart.add_product(Product(
-        available_amount=10,
+        available_amount=7,
         name='Product',
         price=random.random() * 10000),
         amount=9
