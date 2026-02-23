@@ -1,1 +1,1 @@
-[{"uid":"1b07453e4f3c7bd4","name":"test_place_order_with_mocked_repo[order_1-shipping_1]","time":{"start":1771849656034,"stop":1771849656036,"duration":2},"status":"failed","severity":"normal"}]
+[{"uid":"2f9a40cbba409cfd","name":"test_place_order_with_mocked_repo[order_1-shipping_1]","time":{"start":1771849661250,"stop":1771849661251,"duration":1},"status":"failed","severity":"normal"}]
