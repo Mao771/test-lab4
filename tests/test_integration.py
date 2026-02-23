@@ -26,7 +26,7 @@ def test_place_order_with_mocked_repo(mocker, order_id, shipping_id):
 
     cart = ShoppingCart()
     cart.add_product(Product(
-        available_amount=7,
+        available_amount=10,
         name='Product',
         price=random.random() * 10000),
         amount=9
@@ -40,6 +40,7 @@ def test_place_order_with_mocked_repo(mocker, order_id, shipping_id):
     )
 
     assert actual_shipping_id == shipping_id, "Actual shipping id must be equal to mock return value"
+    assert 1 == 2, "No way!"
 
     mock_repo.create_shipping.assert_called_with(ShippingService.list_available_shipping_type()[0], ["Product"], order_id, shipping_service.SHIPPING_CREATED, due_date)
     mock_publisher.send_new_shipping.assert_called_with(shipping_id)
