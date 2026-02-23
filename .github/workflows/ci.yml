@@ -6,6 +6,10 @@ on:
   pull_request:
     branches: [ "main" ]
 
+permissions:
+  contents: read
+  security-events: write  # ← required for uploading SARIF results
+
 jobs:
   unit-tests:
     strategy:
