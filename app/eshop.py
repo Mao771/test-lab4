@@ -8,6 +8,12 @@ class Product:
     price: float
 
     def __init__(self, name, price, available_amount):
+        try:
+            price = float(price)
+        except:
+            raise ValueError
+        if price != price:
+            raise ValueError
         self.name = name
         self.price = price
         self.available_amount = available_amount
